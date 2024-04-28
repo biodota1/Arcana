@@ -6,7 +6,7 @@ export default function Login() {
   return (
     <form
       className="h-full bg-red-500 flex flex-col items-center justify-center gap-4"
-      onSubmit={() => navigate("onGame")}
+      onSubmit={() => navigate("/ongame")}
     >
       <h1 className="text-5xl font-bold text-white my-5">Login</h1>
       <label className="form-control w-full max-w-xs">

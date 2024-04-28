@@ -5,6 +5,9 @@ import Options from "./main_menu/Options";
 import Login from "./main_menu/Login";
 import Register from "./main_menu/Register";
 import About from "./main_menu/About";
+import PrivatePath from "./private/PrivatePath";
+import OnGame from "./private/OnGame";
+import UserMenuLayout from "./private/UserMenuLayout";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +33,16 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        element: <PrivatePath />,
+        children: [
+          {
+            path: "/ongame",
+            element: <OnGame />,
+            children: [{ index: true, Component: () => <UserMenuLayout /> }],
+          },
+        ],
       },
     ],
   },
